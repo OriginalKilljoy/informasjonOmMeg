@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            body,
+            html {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            body {
+                background-color: white;
+            }
+
+            .container-parent {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: lightgray;
+            }
+
+            .container-child {
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                border-width: 2px;
+                border-color: black;
+                border-style: solid;
+                width: 300px;
+                padding: 3px;
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-parent" id="fullScreen">
+            <div class="container-child">
+                <div id="tekst">
+                    Jeg heter Julie, jeg er 27 år og kommer fra Sandefjord!
+                </div>
+                <div id="tekst2">
+                    Mine hobbyer er:
+                    <ul>
+                        <li>Alt av DIY</li>
+                        <li>DnD</li>
+                        <li>Videospill</li>
+                        <li>Lego</li>
+                        <li>Dans</li>
+                        <li>Sudoku</li>
+                    </ul>
+                </div>
+            </div>
+            <img src="img/me3.jpg" width="300px" class="bilde" />
+        </div>
+        <button onclick="changeBackground()">Dark mode</button>
+
+        <script>
+            function changeBackground() {
+                let tekst = document.getElementById("tekst");
+                tekst.style.color = "white";
+                let tekst2 = document.getElementById("tekst2");
+                tekst2.style.color = "white";
+                document.getElementById("tekst").style.backgroundColor =
+                    "black";
+                document.getElementById("tekst2").style.backgroundColor =
+                    "black";
+                document.getElementById("fullScreen").style.backgroundColor =
+                    "darkGrey";
+            }
+        </script>
+    </body>
+</html>
